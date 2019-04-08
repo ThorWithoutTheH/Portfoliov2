@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import styled from '@emotion/styled';
-import {injectGlobal} from 'emotion'
-import Raleway from '../assets/fonts/Raleway-Regular.ttf';
-import OpenSans from '../assets/fonts/OpenSans-SemiBold.ttf';
+import React, { Component } from "react";
+import styled from "@emotion/styled";
+import { injectGlobal } from "emotion";
+import Raleway from "../assets/fonts/Raleway-Regular.ttf";
+import OpenSans from "../assets/fonts/OpenSans-SemiBold.ttf";
 
 const InfoBoxWrapper = styled.div`
   margin-top: 150px;
@@ -19,10 +19,10 @@ const StyledName = styled.h3`
 `;
 
 const Highlight = styled.a`
-  font-family: 'Open Sans';
-  color: #E31B6D;
+  font-family: "Open Sans";
+  color: #e31b6d;
   transition: transform 300ms ease-in-out;
-  cursor: pointer; 
+  cursor: pointer;
   font-size: 30px;
   margin-left: 5px;
   &:hover {
@@ -43,11 +43,11 @@ const SocialMediaLinks = styled.a`
   margin: 15px;
   font-family: Raleway;
   transition: transform 300ms ease-in-out;
-  cursor: pointer; 
+  cursor: pointer;
   text-decoration: none;
 
   &:hover {
-    color: #E31B6D;
+    color: #e31b6d;
   }
 `;
 
@@ -58,21 +58,26 @@ function mailTo() {
 class Footer extends Component {
   render() {
     return (
-    <div>
-      <InfoBoxWrapper>
-        <StyledName>Looking to start a project?</StyledName>
-        <Highlight onClick={mailTo}>Let's talk.</Highlight>
-      </InfoBoxWrapper>
-      <SocialMediaLinkWrapper>
-        <SocialMediaLinks href='https://github.com/ThorWithoutTheH'>Github</SocialMediaLinks>
-        <SocialMediaLinks href='https://www.linkedin.com/in/vittoriogrosa/'>LinkedIn</SocialMediaLinks>
-        <SocialMediaLinks href='https://www.linkedin.com/in/vittoriogrosa/'>Instagram</SocialMediaLinks>
-        <SocialMediaLinks onClick={mailTo}>Email</SocialMediaLinks>
-      </SocialMediaLinkWrapper>
-    </div>
+      <div>
+        <InfoBoxWrapper>
+          <StyledName>Looking to start a project?</StyledName>
+          <Highlight onClick={mailTo}>Let's talk.</Highlight>
+        </InfoBoxWrapper>
+        <SocialMediaLinkWrapper>
+          <SocialMediaLinks href="https://github.com/ThorWithoutTheH">
+            Github
+          </SocialMediaLinks>
+          <SocialMediaLinks href="https://www.linkedin.com/in/vittoriogrosa/">
+            LinkedIn
+          </SocialMediaLinks>
+          <SocialMediaLinks href="https://www.linkedin.com/in/vittoriogrosa/">
+            Instagram
+          </SocialMediaLinks>
+          <SocialMediaLinks onClick={mailTo}>Email</SocialMediaLinks>
+        </SocialMediaLinkWrapper>
+      </div>
     );
   }
 }
-
 
 export default Footer;

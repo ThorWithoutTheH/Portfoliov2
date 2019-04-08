@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import history from '../history';
+import React from "react";
+import styled from "@emotion/styled";
+import history from "../history";
 
-import LogoImage from '../assets/images/Original-on-Transparent.png';
+import LogoImage from "../assets/images/Original-on-Transparent.png";
 
 const Logo = styled.div`
   height: 240px;
@@ -15,18 +15,16 @@ const Logo = styled.div`
   transition: transform 300ms ease-in-out;
 
   &:hover {
-      transform: translate(10px, 15px)
-    }
+    transform: translate(10px, 15px);
+  }
 `;
 
 function redirectBackToHome() {
-  history.push('/');
+  history.push("/");
 }
 
 function MyLogo() {
-    return (
-        <Logo onClick={redirectBackToHome} />
-    );
-  }
+  return <Logo onClick={redirectBackToHome} />;
+}
 
 export default MyLogo;

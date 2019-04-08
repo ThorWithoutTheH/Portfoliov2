@@ -1,19 +1,10 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-const WorkContainer = styled.div`
-
-
-`;
-
+const WorkContainer = styled.div``;
 
 function EarTrainer() {
-    return (
-      <WorkContainer>
-          Ear Trainer
-      </WorkContainer>
-    );
-  }
-
+  return <WorkContainer>Ear Trainer</WorkContainer>;
+}
 
 export default EarTrainer;

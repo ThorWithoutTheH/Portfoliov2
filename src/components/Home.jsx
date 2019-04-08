@@ -1,22 +1,22 @@
-import React, {Component} from 'react';
-import styled from '@emotion/styled';
-import Footer from './Footer';
-import Logo from './Logo';
-import About from './About';
-import ProjectCarousel from './ProjectCarousel';
-import Nav from './Nav';
-import bfLogo from '../assets/images/bflogo.png';
-import OriginalLogo from '../assets/images/Original-on-Transparent.png';
-import GreyLogo from '../assets/images/Grayscale-on-Transparent.png';
+import React, { Component } from "react";
+import styled from "@emotion/styled";
+import Footer from "./Footer";
+import Logo from "./Logo";
+import About from "./About";
+import ProjectCarousel from "./ProjectCarousel";
+import Nav from "./Nav";
+import bfLogo from "../assets/images/bflogo.png";
+import OriginalLogo from "../assets/images/Original-on-Transparent.png";
+import GreyLogo from "../assets/images/Grayscale-on-Transparent.png";
 
 const AppWrapper = styled.div`
   margin-right: auto; /* 1 */
-  margin-left:  auto; /* 1 */
+  margin-left: auto; /* 1 */
 
   max-width: 1420px; /* 2 */
 
   padding-right: 10px; /* 3 */
-  padding-left:  10px; /* 3 */
+  padding-left: 10px; /* 3 */
 `;
 
 const EmployerContainer = styled.div`
@@ -63,11 +63,11 @@ const MyLogo = styled.div`
   &:hover {
     background: url(${GreyLogo}) no-repeat center;
     background-size: contain;
-    transform: translate(0, -10px)
-}
+    transform: translate(0, -10px);
+  }
 `;
 
-const BattlefyLogo = styled.div `
+const BattlefyLogo = styled.div`
   cursor: pointer;
   max-width: 100%;
   width: 250px;
@@ -77,43 +77,42 @@ const BattlefyLogo = styled.div `
   order: 4;
 
   transition: transform 300ms ease-in-out;
-  
+
   &:hover {
     opacity: 0.7;
-    transform: translate(0, -10px)
+    transform: translate(0, -10px);
   }
 `;
 
 class Home extends Component {
   constructor(props) {
     super(props);
-}
+  }
 
   scrollToBottom() {
-   window.scrollTo({top: 3500, left: 0, behaviour: 'smooth'});
+    window.scrollTo({ top: 3500, left: 0, behaviour: "smooth" });
   }
   toBattlefy() {
-   window.location = "https://battlefy.com/";
+    window.location = "https://battlefy.com/";
   }
 
   render() {
     return (
-    <AppWrapper>
-    <Nav />
-    <Logo />
-    <About />
-    <EmployerContainer>
-    <CurrentlyDiv>Currently:</CurrentlyDiv>
-    <MyLogo onClick={this.scrollToBottom}/>
-    <PreviousDiv>Previously:</PreviousDiv>
-    <BattlefyLogo onClick={this.toBattlefy}/>
-    </EmployerContainer>
-    <ProjectCarousel/>
-    <Footer />
-    </AppWrapper>
+      <AppWrapper>
+        <Nav />
+        <Logo />
+        <About />
+        <EmployerContainer>
+          <CurrentlyDiv>Currently:</CurrentlyDiv>
+          <MyLogo onClick={this.scrollToBottom} />
+          <PreviousDiv>Previously:</PreviousDiv>
+          <BattlefyLogo onClick={this.toBattlefy} />
+        </EmployerContainer>
+        <ProjectCarousel />
+        <Footer />
+      </AppWrapper>
     );
   }
 }
-
 
 export default Home;

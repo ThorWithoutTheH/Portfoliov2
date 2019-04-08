@@ -1,19 +1,10 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-const WorkContainer = styled.div`
-
-
-`;
-
+const WorkContainer = styled.div``;
 
 function Battlefy() {
-    return (
-      <WorkContainer>
-          Battlefy
-      </WorkContainer>
-    );
-  }
-
+  return <WorkContainer>Battlefy</WorkContainer>;
+}
 
 export default Battlefy;
