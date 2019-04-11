@@ -3,12 +3,14 @@ import styled from "@emotion/styled";
 import history from "../history";
 
 const ProjectsWrapper = styled.div`
-
-
+  max-width: 100%;
+  display: flex;
 `;
 
 const NextProj = styled.div`
 
+    width: 50%;
+    
 
 
 
@@ -16,9 +18,21 @@ const NextProj = styled.div`
 
 const PreviousProj = styled.div`
 
-
+    width: 50%;
 
 `;
+
+function nextProject() {
+
+}
+
+function previousProject() {
+
+}
+
+function returnHome() {
+
+}
 
 
 function ProjectNavigator () {

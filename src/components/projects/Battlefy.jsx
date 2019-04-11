@@ -1,10 +1,19 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const WorkContainer = styled.div``;
+import ProjectNavigator from '../ProjectNavigator';
+
+const WorkContainer = styled.div`
+
+`;
 
 function Battlefy() {
-  return <WorkContainer>Battlefy</WorkContainer>;
+  return ( 
+  <WorkContainer>
+    Battlefy
+    <ProjectNavigator/>
+    </WorkContainer>
+  );
 }
 
 export default Battlefy;
