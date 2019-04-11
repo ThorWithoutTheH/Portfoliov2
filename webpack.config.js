@@ -5,7 +5,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'index_bundle.js'
+        filename: 'index_bundle.js',
+        publicPath: '/'
     },    
     resolve: {
         extensions: ['.js', '.jsx']
@@ -33,6 +34,9 @@ module.exports = {
                 loader: 'file-loader?prefix=fonts/' 
             }
         ]
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     plugins: [
         new HtmlWebpackPlugin({

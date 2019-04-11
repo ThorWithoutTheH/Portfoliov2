@@ -14,7 +14,10 @@ const NextProj = styled.div`
   border-width: 5px;
 
 
-
+  &:hover {
+    box-shadow: 0 2px 2px #bababa;
+   transform: translate(0px, -5px);
+ }
 `;
 
 const PreviousProj = styled.div`
@@ -22,7 +25,10 @@ const PreviousProj = styled.div`
   height: 50%;
   border-style: solid;
   border-width: 5px;
-
+  &:hover {
+    box-shadow: 0 2px 2px #bababa;
+   transform: translate(0px, -5px);
+ }
 `;
 
 function nextProject() {
