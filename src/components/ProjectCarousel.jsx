@@ -26,6 +26,7 @@ const ImageWrap = styled.div`
   transition: transform 300ms ease-in-out;
 
   &:hover {
+     box-shadow: 0 2px 2px #bababa;
     transform: translate(0px, -15px);
   }
 `;
