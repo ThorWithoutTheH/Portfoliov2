@@ -27,7 +27,7 @@ const ImageWrap = styled.div`
 
   &:hover {
      box-shadow: 0 2px 2px #bababa;
-    transform: translate(0px, -15px);
+    transform: translate(0px, -5px);
   }
 `;
 

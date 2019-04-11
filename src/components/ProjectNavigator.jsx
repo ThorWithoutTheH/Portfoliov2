@@ -8,17 +8,20 @@ const ProjectsWrapper = styled.div`
 `;
 
 const NextProj = styled.div`
-
-    width: 50%;
-    
+  width: 50%;
+  height: 50%;
+  border-style: solid;
+  border-width: 5px;
 
 
 
 `;
 
 const PreviousProj = styled.div`
-
-    width: 50%;
+  width: 50%;
+  height: 50%;
+  border-style: solid;
+  border-width: 5px;
 
 `;
 
@@ -36,12 +39,12 @@ function returnHome() {
 
 
 function ProjectNavigator () {
-    return (
-    <ProjectsWrapper>
-        <PreviousProj>Previous Project</PreviousProj>
-        <NextProj >Next Project</NextProj>
-    </ProjectsWrapper>
-    );
+	return (
+	<ProjectsWrapper>
+		<PreviousProj>Previous Project</PreviousProj>
+		<NextProj >Next Project</NextProj>
+	</ProjectsWrapper>
+	);
 }
 
 export default ProjectNavigator;
