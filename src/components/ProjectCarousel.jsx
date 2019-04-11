@@ -35,7 +35,6 @@ const Project1Snippet = styled.img`
   margin: 15px;
   transition: transform 300ms ease-in-out;
   cursor: pointer;
-
 `;
 
 const TextForProject = styled.div`
@@ -48,21 +47,18 @@ const Project2Snippet = styled.img`
   margin: 15px;
   transition: transform 300ms ease-in-out;
   cursor: pointer;
-
 `;
 
 const Project3Snippet = styled.img`
   margin: 15px;
   transition: transform 300ms ease-in-out;
   cursor: pointer;
-
 `;
 
 const Project4Snippet = styled.img`
   margin: 15px;
   transition: transform 300ms ease-in-out;
   cursor: pointer;
-
 `;
 
 const ProjectText = styled.div`

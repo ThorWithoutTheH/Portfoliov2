@@ -22,12 +22,12 @@ const PreviousProj = styled.div`
 
 
 function ProjectNavigator () {
-
-    return 
+    return (
     <ProjectsWrapper>
         <PreviousProj>Previous Project</PreviousProj>
         <NextProj >Next Project</NextProj>
     </ProjectsWrapper>
+    );
 }
 
 export default ProjectNavigator;
