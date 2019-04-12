@@ -54,15 +54,14 @@ const MyLogo = styled.div`
   max-height: 100%;
   width: 120px;
   height: 100px;
-  background: url(${OriginalLogo}) no-repeat center;
+  background: url(${GreyLogo}) no-repeat center;
   background-size: contain;
   order: 1;
 
   transition: transform 300ms ease-in-out;
 
   &:hover {
-    background: url(${GreyLogo}) no-repeat center;
-    background-size: contain;
+    opacity: 0.7;
     transform: translate(0, -10px);
   }
 `;

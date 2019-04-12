@@ -27,25 +27,35 @@ const ProjectTitleAndAboutWrapper = styled.div`
   margin-bottom: 3em;
 `;
 
+const HeaderStyled = styled.header`
+  margin: auto 5% auto 0;
+  max-width: 640px;
+`;
+
 const ProjectTitle = styled.h1`
-  font-family: Abel-Regular;
+  font-family: Raleway;
   font-size: 22px;
   letter-spacing: 3px;
 
 `;
 
 const ProjectAboutBold = styled.h2`
-  font-family: Raleway;
-
+  font-family: Abel-Regular;
+  letter-spacing: -1px;
 
 `;
 
+// TODO: MAKE THIS LARGER THAN VIEW PORT 
 const ProjectScreenShot = styled.div`
-  height: 760px;
-  width: 60%;
+  width: 100vw;
   background: url(${BfProject}) no-repeat center;
   background-size: contain;
-  
+  margin-bottom: 1.5em;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: 50vw;
+  margin-right: -50vw;  
 `;  
 
 const ProjectCenterText = styled.div`
@@ -131,8 +141,10 @@ function Battlefy() {
     <Nav />
     <Logo />
     <ProjectTitleAndAboutWrapper>
-      <ProjectTitle>Super Smash Brothers Ultimate - NA Open. Hosted by Battlefy</ProjectTitle>
-      <ProjectAboutBold>The largest Super Smash Bros tournament to date, with over 10000 entrants. The finalist were invited to PAX East. </ProjectAboutBold>
+      <HeaderStyled>
+        <ProjectTitle>Super Smash Brothers Ultimate. Hosted by Battlefy</ProjectTitle>
+        <ProjectAboutBold>The largest Super Smash Bros tournament to date, with over 10000 entrants. The finalist were invited to PAX East. </ProjectAboutBold>
+      </HeaderStyled>
     </ProjectTitleAndAboutWrapper>
     <ProjectScreenShot />
     <ProjectsWrapper>
