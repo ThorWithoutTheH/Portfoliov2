@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Fragment } from "react";
 import styled from "@emotion/styled";
 
 const AboutMeWrapper = styled.div`
@@ -33,7 +33,7 @@ function About() {
           software developer
         </HighLight>
         <div> living in Vancouver</div>
-        <div> seeking new opportunities.</div>
+        <Fragment> seeking new opportunities.</Fragment>
       </AboutMeText>
     </AboutMeWrapper>
   );
