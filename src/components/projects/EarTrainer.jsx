@@ -4,6 +4,7 @@ import history from '../../history';
 import Footer from '../Footer';
 import Nav from '../Nav';
 import Logo from '../Logo';
+import EarTrainerBanner from '../../assets/images/ProjectEarTrainer.jpg';
 
 const ProjectsContainer = styled.div`
   margin-right: auto; /* 1 */
@@ -13,8 +14,94 @@ const ProjectsContainer = styled.div`
 
   padding-right: 10px; /* 3 */
   padding-left: 10px; /* 3 */
+  disply: flex;
 `;
 
+const ProjectTitleAndAboutWrapper = styled.div`
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-position: 50%;
+  background-size: cover;
+  width: 100%;
+  margin-bottom: 3em;
+`;
+
+const ProjectDetailsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  width: 90%;
+  background-position: 50%;
+  margin-bottom: 3em;
+  align-items: center;
+`;
+
+const HeaderStyled = styled.header`
+  margin: auto 5% auto 0;
+  max-width: 820px;
+`;
+
+const ProjectTitle = styled.h1`
+  font-family: Abel-Regular;
+  font-size: 32px;
+  letter-spacing: 3px;
+
+`;
+
+const ProjectAboutBold = styled.h2`
+  font-family: Abel-Regular;
+  letter-spacing: -1px;
+
+`;
+
+const EarTrainerScreen = styled.div`
+  width: 100vw;
+  height: 600px;
+  background-size: contain;
+  margin-bottom: 1.5em;
+  background: url(${EarTrainerBanner}) no-repeat center;
+
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;  
+`; 
+
+const ProjectDetails = styled.p`
+  font-family: Raleway;
+  width: 50%;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+`;
+
+const Bullets = styled.ul`
+  font-size: 1.1rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+`;
+
+const ProjectBullet = styled.li`
+  font-family: Raleway;
+  margin-bottom: 1em;
+  line-height: 1.6;
+  
+`;
+
+const LinkToDevPost = styled.a`
+  font-family: Raleway; 
+  align-items: center;
+  color: #ff98cb;
+  text-decoration: none;
+
+  &:hover {
+    color: #decafe;
+ }
+`;
+
+// Navigating Projects
 const ProjectsWrapper = styled.div`
   max-width: 100%;
   display: flex;
@@ -81,10 +168,36 @@ function EarTrainer() {
   <ProjectsContainer>
     <Nav />
     <Logo />
-    DURH EAR TRAINER
+
+    <ProjectTitleAndAboutWrapper>
+      <HeaderStyled>
+        <ProjectTitle>Ear Trainer - iOS Project</ProjectTitle>
+        <ProjectAboutBold>An app designed to help musicians train their ears, by identifying the notes played over a thirty second period.</ProjectAboutBold>
+      </HeaderStyled>
+    </ProjectTitleAndAboutWrapper>
+
+    <EarTrainerScreen />
+
+    <ProjectDetailsWrapper>
+      <ProjectTitle>Ear Trainer</ProjectTitle>
+      <ProjectDetails>A game jam is an event where game enthusiasts come together and create a game based on a theme that has been given by the organizers. Our game Scalier - a puzzle platformer set in a lucid dream, won the first place prize from East Side Games for their theme 'weird'.</ProjectDetails>
+      <LinkToDevPost href='https://github.com/ThorWithoutTheH/EarTrainer'>Link to code.</LinkToDevPost>
+    </ProjectDetailsWrapper>
+
+    <ProjectDetailsWrapper>
+      <ProjectDetails>72 hour project created by two classmates and myself using Game Maker Studio 2 (GMS2). We chose GMS2 because it provided an easy way for three programmers to create animations and sprites, while also being a great foundation for 2D platformers & physics. My contributions to the game for this project were:  </ProjectDetails>
+      <Bullets>
+        <ProjectBullet>Animations & Sprites.</ProjectBullet>
+        <ProjectBullet>In game mechanics such as jumping, walking, enemy AI, waypoints.</ProjectBullet>
+        <ProjectBullet>Level design and asset creation.</ProjectBullet>
+        <ProjectBullet>Game narrative and story.</ProjectBullet>
+      </Bullets>
+    </ProjectDetailsWrapper>
+
+
     <ProjectsWrapper>
 		  <PreviousProj onClick={prevProject}>Previous Project</PreviousProj>
-		  <NextProj onClick={nextProject} >Next Project</NextProj>
+		  <NextProj onClick={nextProject}>Next Project</NextProj>
 	  </ProjectsWrapper>
     <Footer />
     </ProjectsContainer>

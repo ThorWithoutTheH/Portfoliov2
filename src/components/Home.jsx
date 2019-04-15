@@ -6,7 +6,6 @@ import About from "./About";
 import ProjectCarousel from "./ProjectCarousel";
 import Nav from "./Nav";
 import bfLogo from "../assets/images/bflogo.png";
-import OriginalLogo from "../assets/images/Original-on-Transparent.png";
 import GreyLogo from "../assets/images/Grayscale-on-Transparent.png";
 
 const AppWrapper = styled.div`

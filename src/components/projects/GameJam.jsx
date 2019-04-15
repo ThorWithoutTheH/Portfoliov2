@@ -180,17 +180,17 @@ function GameJam() {
 
     <ProjectDetailsWrapper>
       <ProjectTitle>Scalier</ProjectTitle>
-      <ProjectDetails>Portals are one of the most common entry points for users, and our team really wanted to impress with this portal. The ability for our users to find, and understand the rules and sign up process is critical. The Smash Bros Portal was unique due to the volume of regional sign ups we had to handle. Our team did a fantastic job showing the different regions and dates. </ProjectDetails>
-      <LinkToDevPost href='https://devpost.com/software/scalier'>If you want to try the game for yourself.</LinkToDevPost>
+      <ProjectDetails>A game jam is an event where game enthusiasts come together and create a game based on a theme that has been given by the organizers. Our game Scalier - a puzzle platformer set in a lucid dream, won the first place prize from East Side Games for their theme 'weird'.</ProjectDetails>
+      <LinkToDevPost href='https://devpost.com/software/scalier'>Download & try the game for yourself or check out our code.</LinkToDevPost>
     </ProjectDetailsWrapper>
 
     <ProjectDetailsWrapper>
-      <ProjectDetails>72 hour project created by two classmates and myself using Game Maker Studio 2.  </ProjectDetails>
+      <ProjectDetails>72 hour project created by two classmates and myself using Game Maker Studio 2 (GMS2). We chose GMS2 because it provided an easy way for three programmers to create animations and sprites, while also being a great foundation for 2D platformers & physics. My contributions to the game for this project were:  </ProjectDetails>
       <Bullets>
-        <ProjectBullet>Help grow and cement the future of esports.</ProjectBullet>
-        <ProjectBullet>Create the best possible platform for organizers and ssers.</ProjectBullet>
-        <ProjectBullet>Develop and productise features for Battlefy.com.</ProjectBullet>
-        <ProjectBullet>Work with developers to create amazing tournaments.</ProjectBullet>
+        <ProjectBullet>Animations & Sprites.</ProjectBullet>
+        <ProjectBullet>In game mechanics such as jumping, walking, enemy AI, waypoints.</ProjectBullet>
+        <ProjectBullet>Level design and asset creation.</ProjectBullet>
+        <ProjectBullet>Game narrative and story.</ProjectBullet>
       </Bullets>
     </ProjectDetailsWrapper>
 
