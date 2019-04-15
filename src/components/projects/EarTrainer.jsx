@@ -81,6 +81,7 @@ function EarTrainer() {
   <ProjectsContainer>
     <Nav />
     <Logo />
+    DURH EAR TRAINER
     <ProjectsWrapper>
 		  <PreviousProj onClick={prevProject}>Previous Project</PreviousProj>
 		  <NextProj onClick={nextProject} >Next Project</NextProj>

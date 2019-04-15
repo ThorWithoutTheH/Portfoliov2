@@ -5,6 +5,8 @@ import Footer from '../Footer';
 import Nav from '../Nav';
 import Logo from '../Logo';
 import BfProject from '../../assets/images/BfProject.jpg';
+import BfSignup from '../../assets/images/BfSignUp.jpg';
+import SmashMobileMenu from '../../assets/images/SmashMobile.jpg';
 
 const ProjectsContainer = styled.div`
   margin-right: auto; /* 1 */
@@ -34,17 +36,17 @@ const ProjectDetailsWrapper = styled.div`
   width: 90%;
   background-position: 50%;
   margin-bottom: 3em;
-
+  align-items: center;
 `;
 
 const HeaderStyled = styled.header`
   margin: auto 5% auto 0;
-  max-width: 640px;
+  max-width: 820px;
 `;
 
 const ProjectTitle = styled.h1`
   font-family: Abel-Regular;
-  font-size: 22px;
+  font-size: 32px;
   letter-spacing: 3px;
 
 `;
@@ -66,33 +68,64 @@ const SmashPortalScreen = styled.div`
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;  
+`; 
+
+const SmashSignup = styled.div`
+  width: 100vw;
+  height: 500px;
+  background: url(${BfSignup}) no-repeat center;
+  background-size: contain;
+  margin-bottom: 1.5em;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;  
 `;  
-// TODO: Add Another Screenshot of the different regions
-const SmashRegionScreen = styled.div`
 
-
-
-
-`;
+const SmashMobile = styled.div`
+  width: 100vw;
+  height: 500px;
+  background: url(${SmashMobileMenu}) no-repeat center;
+  background-size: contain;
+  margin-bottom: 1.5em;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;  
+`;  
 
 const ProjectDetails = styled.p`
   font-family: Raleway;
   width: 50%;
-
+  font-size: 1.1rem;
+  letter-spacing: 1px;
 `;
 
 const Bullets = styled.ul`
+  font-size: 1.1rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const ProjectBullet = styled.li`
   font-family: Raleway;
-  width: 50%; 
+  margin-bottom: 1em;
+  line-height: 1.6;
+  
 `;
 
 const LinkToBattlefy = styled.a`
+  font-family: Raleway; 
+  align-items: center;
+  color: #ff98cb;
+  text-decoration: none;
 
-
-
+  &:hover {
+    color: #decafe;
+ }
 `;
 
 // Navigating Projects
@@ -169,7 +202,7 @@ function Battlefy() {
     <ProjectTitleAndAboutWrapper>
       <HeaderStyled>
         <ProjectTitle>Super Smash Brothers Ultimate. Powered by Battlefy</ProjectTitle>
-        <ProjectAboutBold>The largest Super Smash Bros tournament to date, with over 10000 entrants. The finalist were invited to PAX East. </ProjectAboutBold>
+        <ProjectAboutBold>The largest Super Smash Bros tournament to date, with over 10,000 entrants. The finalists were invited to PAX East by Nintendo. </ProjectAboutBold>
       </HeaderStyled>
     </ProjectTitleAndAboutWrapper>
 
@@ -186,14 +219,25 @@ function Battlefy() {
       </Bullets>
     </ProjectDetailsWrapper>
 
-    <SmashPortalScreen />
+    <SmashSignup />
 
     <ProjectDetailsWrapper>
-      <ProjectDetails>Portals are one of the most common entry points for our users. </ProjectDetails>
+      <ProjectDetails>Portals are one of the most common entry points for users, and our team really wanted to impress with this portal. The ability for our users to find, and understand the rules and sign up process is critical. The Smash Bros Portal was unique due to the volume of regional sign ups we had to handle. Our team did a fantastic job showing the different regions and dates. </ProjectDetails>
+      <LinkToBattlefy href='https://www.battlefy.com/supersmashbros2019'>Battlefy Super Smash Bros 2019 Portal</LinkToBattlefy>
+
     </ProjectDetailsWrapper>
 
-    <LinkToBattlefy>Battlefy Super Smash Bros 2019 Portal</LinkToBattlefy>
-    
+    <SmashMobile />
+
+    <ProjectDetailsWrapper>
+    <ProjectDetails>I was very fortunate to get to work with such an amazingly skilled team, with some solid leaders. The technologies used on the portal included: Node, React & MongoDB. My specific contributions included </ProjectDetails>
+      <Bullets>
+        <ProjectBullet>Incorporation of custom ruleset to Battlefy.com for all Super Smash Games.</ProjectBullet>
+        <ProjectBullet>Mobile Navigation (Pictured Above).</ProjectBullet>
+        <ProjectBullet>Portal QA, mobile responsiveness and bug fixes.</ProjectBullet>
+      </Bullets>
+    </ProjectDetailsWrapper>
+
     <ProjectsWrapper>
 		  <PreviousProj onClick={redirectBackToHome}>Return Home</PreviousProj>
 		  <NextProj onClick={toNextProj} >Next Project</NextProj>
