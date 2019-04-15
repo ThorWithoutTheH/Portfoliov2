@@ -129,7 +129,7 @@ const ProjectsWrapper = styled.div`
   display: flex;
 `;
 
-const NextProj = styled.div`
+const ReturnHome = styled.div`
   height: 350px;
   width: 50vw;
   position: relative;

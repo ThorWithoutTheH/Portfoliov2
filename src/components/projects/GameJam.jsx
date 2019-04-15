@@ -5,6 +5,7 @@ import Footer from '../Footer';
 import Nav from '../Nav';
 import Logo from '../Logo';
 import Scalier from '../../assets/images/Scalier.jpg';
+
 const ProjectsContainer = styled.div`
   margin-right: auto; /* 1 */
   margin-left: auto; /* 1 */
@@ -54,7 +55,7 @@ const ProjectAboutBold = styled.h2`
 
 `;
 
-const SmashPortalScreen = styled.div`
+const ScalierScreen = styled.div`
   width: 100vw;
   height: 600px;
   background-size: contain;
@@ -67,30 +68,6 @@ const SmashPortalScreen = styled.div`
   margin-left: -50vw;
   margin-right: -50vw;  
 `; 
-
-const SmashSignup = styled.div`
-  width: 100vw;
-  height: 500px;
-  background-size: contain;
-  margin-bottom: 1.5em;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;  
-`;  
-
-const SmashMobile = styled.div`
-  width: 100vw;
-  height: 500px;
-  background-size: contain;
-  margin-bottom: 1.5em;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;  
-`;  
 
 const ProjectDetails = styled.p`
   font-family: Raleway;
@@ -199,11 +176,16 @@ function GameJam() {
       </HeaderStyled>
     </ProjectTitleAndAboutWrapper>
 
-    <SmashPortalScreen />
+    <ScalierScreen />
 
     <ProjectDetailsWrapper>
       <ProjectTitle>Scalier</ProjectTitle>
-      <ProjectDetails>72 hour project created by two classmates and myself. </ProjectDetails>
+      <ProjectDetails>Portals are one of the most common entry points for users, and our team really wanted to impress with this portal. The ability for our users to find, and understand the rules and sign up process is critical. The Smash Bros Portal was unique due to the volume of regional sign ups we had to handle. Our team did a fantastic job showing the different regions and dates. </ProjectDetails>
+      <LinkToDevPost href='https://devpost.com/software/scalier'>If you want to try the game for yourself.</LinkToDevPost>
+    </ProjectDetailsWrapper>
+
+    <ProjectDetailsWrapper>
+      <ProjectDetails>72 hour project created by two classmates and myself using Game Maker Studio 2.  </ProjectDetails>
       <Bullets>
         <ProjectBullet>Help grow and cement the future of esports.</ProjectBullet>
         <ProjectBullet>Create the best possible platform for organizers and ssers.</ProjectBullet>
@@ -212,13 +194,6 @@ function GameJam() {
       </Bullets>
     </ProjectDetailsWrapper>
 
-    <SmashSignup />
-
-    <ProjectDetailsWrapper>
-      <ProjectDetails>Portals are one of the most common entry points for users, and our team really wanted to impress with this portal. The ability for our users to find, and understand the rules and sign up process is critical. The Smash Bros Portal was unique due to the volume of regional sign ups we had to handle. Our team did a fantastic job showing the different regions and dates. </ProjectDetails>
-      <LinkToDevPost href='https://devpost.com/software/scalier'>If you want to try the game for yourself.</LinkToDevPost>
-
-    </ProjectDetailsWrapper>
 
     <ProjectsWrapper>
 		  <PreviousProj onClick={prevProject}>Previous Project</PreviousProj>
