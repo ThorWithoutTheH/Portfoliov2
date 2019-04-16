@@ -6,7 +6,7 @@ const Logo = styled.div`
   height: 240px;
   width: 200px;
   cursor: pointer;
-  background-image: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376356/Portfolio/Original-on-Transparent_mtfclp.png');
+  background-image: url("https://res.cloudinary.com/dw110cbuf/image/upload/v1555376356/Portfolio/Original-on-Transparent_mtfclp.png");
   background-repeat: no-repeat;
   background-size: contain;
   margin: 30px;

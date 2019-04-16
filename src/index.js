@@ -6,7 +6,7 @@ import { injectGlobal } from "emotion";
 import Raleway from "./assets/fonts/Raleway-Regular.ttf";
 import OpenSans from "./assets/fonts/OpenSans-SemiBold.ttf";
 import Abel from "./assets/fonts/Abel-Regular.ttf";
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./components/Home";
 import Battlefy from "./components/projects/Battlefy";
 import GameJam from "./components/projects/GameJam";
@@ -30,13 +30,13 @@ injectGlobal`
 
 ReactDOM.render(
   <Router history={history}>
-  <ScrollToTop>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/work-battlefy" component={Battlefy} />
-    <Route exact path="/projects-bcgamejam18" component={GameJam} />
-    <Route exact path="/projects-eartrainer" component={EarTrainer} />
-    <Route exact path="/projects-flycasual" component={FlyCasual} />
-  </ScrollToTop>
+    <ScrollToTop>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/work-battlefy" component={Battlefy} />
+      <Route exact path="/projects-bcgamejam18" component={GameJam} />
+      <Route exact path="/projects-eartrainer" component={EarTrainer} />
+      <Route exact path="/projects-flycasual" component={FlyCasual} />
+    </ScrollToTop>
   </Router>,
   document.getElementById("app")
 );

@@ -51,7 +51,8 @@ const MyLogo = styled.div`
   max-height: 100%;
   width: 120px;
   height: 100px;
-  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376354/Portfolio/Grayscale-on-Transparent_fqejba.png') no-repeat center;
+  background: url("https://res.cloudinary.com/dw110cbuf/image/upload/v1555376354/Portfolio/Grayscale-on-Transparent_fqejba.png")
+    no-repeat center;
   background-size: contain;
   order: 1;
 
@@ -68,7 +69,8 @@ const BattlefyLogo = styled.div`
   max-width: 100%;
   width: 250px;
   height: 100px;
-  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376372/Portfolio/bflogo_iyvopz.png') no-repeat center;
+  background: url("https://res.cloudinary.com/dw110cbuf/image/upload/v1555376372/Portfolio/bflogo_iyvopz.png")
+    no-repeat center;
   background-size: contain;
   order: 4;
 

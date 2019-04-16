@@ -24,7 +24,7 @@ function scrollToBottom() {
 }
 
 function scrollToWork() {
-  history.push('/');
+  history.push("/");
 }
 
 function Nav() {
