@@ -5,8 +5,6 @@ import Logo from "./Logo";
 import About from "./About";
 import ProjectCarousel from "./ProjectCarousel";
 import Nav from "./Nav";
-import bfLogo from "../assets/images/bflogo.png";
-import GreyLogo from "../assets/images/Grayscale-on-Transparent.png";
 
 const AppWrapper = styled.div`
   margin-right: auto; /* 1 */
@@ -53,7 +51,7 @@ const MyLogo = styled.div`
   max-height: 100%;
   width: 120px;
   height: 100px;
-  background: url(${GreyLogo}) no-repeat center;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376354/Portfolio/Grayscale-on-Transparent_fqejba.png') no-repeat center;
   background-size: contain;
   order: 1;
 
@@ -70,7 +68,7 @@ const BattlefyLogo = styled.div`
   max-width: 100%;
   width: 250px;
   height: 100px;
-  background: url(${bfLogo}) no-repeat center;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376372/Portfolio/bflogo_iyvopz.png') no-repeat center;
   background-size: contain;
   order: 4;
 

@@ -2,11 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import history from '../../history';
 import Footer from '../Footer';
-import Nav from '../Nav';
+import ProjectNav from './ProjectNav';
 import Logo from '../Logo';
-import BfProject from '../../assets/images/BfProject.jpg';
-import BfSignup from '../../assets/images/BfSignUp.jpg';
-import SmashMobileMenu from '../../assets/images/SmashMobile.jpg';
 
 const ProjectsContainer = styled.div`
   margin-right: auto; /* 1 */
@@ -33,7 +30,6 @@ const ProjectDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-size: cover;
-  width: 90%;
   background-position: 50%;
   margin-bottom: 3em;
   align-items: center;
@@ -60,7 +56,7 @@ const ProjectAboutBold = styled.h2`
 const SmashPortalScreen = styled.div`
   width: 100vw;
   height: 500px;
-  background: url(${BfProject}) no-repeat center;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376375/Portfolio/BfProject_t5noz5.jpg') no-repeat center;
   background-size: contain;
   margin-bottom: 1.5em;
   position: relative;
@@ -73,7 +69,7 @@ const SmashPortalScreen = styled.div`
 const SmashSignup = styled.div`
   width: 100vw;
   height: 500px;
-  background: url(${BfSignup}) no-repeat center;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376376/Portfolio/BfSignUp_wbucfm.jpg') no-repeat center;
   background-size: contain;
   margin-bottom: 1.5em;
   position: relative;
@@ -86,7 +82,7 @@ const SmashSignup = styled.div`
 const SmashMobile = styled.div`
   width: 100vw;
   height: 500px;
-  background: url(${SmashMobileMenu}) no-repeat center;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376370/Portfolio/SmashMobile_ojvqzh.jpg') no-repeat center;
   background-size: contain;
   margin-bottom: 1.5em;
   position: relative;
@@ -195,7 +191,7 @@ function toNextProj() {
 function Battlefy() {
   return ( 
   <ProjectsContainer>
-    <Nav />
+    <ProjectNav />
     
     <Logo />
 

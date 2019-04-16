@@ -2,11 +2,6 @@ import React from "react";
 import styled from "@emotion/styled";
 import history from "../history";
 
-import ProjectBattlefy from "../assets/images/ProjectBattlefy.jpg";
-import ProjectGameJam18 from "../assets/images/ProjectGameJam18.jpg";
-import ProjectEarTrainer from "../assets/images/ProjectEarTrainer.jpg";
-import ProjectFlyCasual from "../assets/images/ProjectFlyCasual.jpg";
-
 const ProjectCarouselWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -89,19 +84,19 @@ function ProjectCarousel() {
       <Title>Projects & Featured Work</Title>
       <ProjectCarouselWrapper>
         <ImageWrap>
-          <Project1Snippet src={ProjectBattlefy} onClick={toBattlefy} />
+          <Project1Snippet src='https://res.cloudinary.com/dw110cbuf/image/upload/v1555376358/Portfolio/ProjectBattlefy_eqdsdi.jpg' onClick={toBattlefy} />
           <TextForProject>Battlefy: SSBU Open Nintendo of America</TextForProject>
         </ImageWrap>
         <ImageWrap>
-          <Project2Snippet src={ProjectGameJam18} onClick={toGameJam} />
+          <Project2Snippet src='https://res.cloudinary.com/dw110cbuf/image/upload/v1555376364/Portfolio/ProjectGameJam18_pnfilj.jpg' onClick={toGameJam} />
           <TextForProject>BC Game Jam 18: First Place</TextForProject>
         </ImageWrap>
         <ImageWrap>
-        <Project3Snippet src={ProjectEarTrainer} onClick={toEarTrainer} />
+        <Project3Snippet src='https://res.cloudinary.com/dw110cbuf/image/upload/v1555376360/Portfolio/ProjectEarTrainer_kyx3mr.jpg' onClick={toEarTrainer} />
         <TextForProject>Ear Trainer - iOS App</TextForProject>
         </ImageWrap>
         <ImageWrap>
-        <Project4Snippet src={ProjectFlyCasual} onClick={toFlyCasual} />
+        <Project4Snippet src='https://res.cloudinary.com/dw110cbuf/image/upload/v1555376362/Portfolio/ProjectFlyCasual_o3noic.jpg' onClick={toFlyCasual} />
         <TextForProject>Fly Casual - Open Source Game</TextForProject>
         </ImageWrap>
       </ProjectCarouselWrapper>

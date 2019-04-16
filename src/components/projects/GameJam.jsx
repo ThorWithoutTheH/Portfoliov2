@@ -2,9 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import history from '../../history';
 import Footer from '../Footer';
-import Nav from '../Nav';
+import ProjectNav from './ProjectNav';
 import Logo from '../Logo';
-import Scalier from '../../assets/images/Scalier.jpg';
 
 const ProjectsContainer = styled.div`
   margin-right: auto; /* 1 */
@@ -31,7 +30,6 @@ const ProjectDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-size: cover;
-  width: 90%;
   background-position: 50%;
   margin-bottom: 3em;
   align-items: center;
@@ -60,7 +58,7 @@ const ScalierScreen = styled.div`
   height: 600px;
   background-size: contain;
   margin-bottom: 1.5em;
-  background: url(${Scalier}) no-repeat center;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376368/Portfolio/Scalier_cndjzc.jpg') no-repeat center;
 
   position: relative;
   left: 50%;
@@ -166,7 +164,7 @@ function prevProject() {
 function GameJam() {
   return ( 
   <ProjectsContainer>
-    <Nav />
+    <ProjectNav />
     <Logo />
 
     <ProjectTitleAndAboutWrapper>

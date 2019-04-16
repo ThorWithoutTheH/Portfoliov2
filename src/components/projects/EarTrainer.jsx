@@ -2,9 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import history from '../../history';
 import Footer from '../Footer';
-import Nav from '../Nav';
+import ProjectNav from './ProjectNav';
 import Logo from '../Logo';
-import EarTrainerBanner from '../../assets/images/ProjectEarTrainer.jpg';
 
 const ProjectsContainer = styled.div`
   margin-right: auto; /* 1 */
@@ -31,7 +30,6 @@ const ProjectDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-size: cover;
-  width: 90%;
   background-position: 50%;
   margin-bottom: 3em;
   align-items: center;
@@ -60,7 +58,7 @@ const EarTrainerScreen = styled.div`
   height: 600px;
   background-size: contain;
   margin-bottom: 1.5em;
-  background: url(${EarTrainerBanner}) no-repeat center;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376360/Portfolio/ProjectEarTrainer_kyx3mr.jpg') no-repeat center;
 
   position: relative;
   left: 50%;
@@ -166,35 +164,22 @@ function prevProject() {
 function EarTrainer() {
   return ( 
   <ProjectsContainer>
-    <Nav />
+    <ProjectNav />
     <Logo />
-
     <ProjectTitleAndAboutWrapper>
       <HeaderStyled>
         <ProjectTitle>Ear Trainer - iOS Project</ProjectTitle>
         <ProjectAboutBold>An app designed to help musicians train their ears, by identifying the notes played over a thirty second period.</ProjectAboutBold>
       </HeaderStyled>
     </ProjectTitleAndAboutWrapper>
-
     <EarTrainerScreen />
-
     <ProjectDetailsWrapper>
       <ProjectTitle>Ear Trainer</ProjectTitle>
-      <ProjectDetails>A game jam is an event where game enthusiasts come together and create a game based on a theme that has been given by the organizers. Our game Scalier - a puzzle platformer set in a lucid dream, won the first place prize from East Side Games for their theme 'weird'.</ProjectDetails>
+      <ProjectDetails>Combining my two passions of coding and music, I created Ear Trainer using Swift. Originally started as a school project for an iOS course, my peers encouraged me to continue developing Ear Trainer.   </ProjectDetails>
+      <ProjectDetails>There is currently only one key available, however 'C' is the first note of all white-key major scales and has the most practicality.   </ProjectDetails>
+      <ProjectDetails>Users have thirty seconds to identify as many notes as possible, each note or interval is played audibly so headphones or sound is required. Points are awarded based on the amount of tries and time per note, and the scores can be shared via social media.  </ProjectDetails>
       <LinkToDevPost href='https://github.com/ThorWithoutTheH/EarTrainer'>Link to code.</LinkToDevPost>
     </ProjectDetailsWrapper>
-
-    <ProjectDetailsWrapper>
-      <ProjectDetails>72 hour project created by two classmates and myself using Game Maker Studio 2 (GMS2). We chose GMS2 because it provided an easy way for three programmers to create animations and sprites, while also being a great foundation for 2D platformers & physics. My contributions to the game for this project were:  </ProjectDetails>
-      <Bullets>
-        <ProjectBullet>Animations & Sprites.</ProjectBullet>
-        <ProjectBullet>In game mechanics such as jumping, walking, enemy AI, waypoints.</ProjectBullet>
-        <ProjectBullet>Level design and asset creation.</ProjectBullet>
-        <ProjectBullet>Game narrative and story.</ProjectBullet>
-      </Bullets>
-    </ProjectDetailsWrapper>
-
-
     <ProjectsWrapper>
 		  <PreviousProj onClick={prevProject}>Previous Project</PreviousProj>
 		  <NextProj onClick={nextProject}>Next Project</NextProj>

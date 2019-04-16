@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import history from "../../history";
-
 import Footer from '../Footer';
-import Nav from '../Nav';
+import ProjectNav from './ProjectNav';
 import Logo from '../Logo';
 
 const ProjectsContainer = styled.div`
@@ -31,7 +30,6 @@ const ProjectDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-size: cover;
-  width: 90%;
   background-position: 50%;
   margin-bottom: 3em;
   align-items: center;
@@ -55,41 +53,19 @@ const ProjectAboutBold = styled.h2`
 
 `;
 
-const SmashPortalScreen = styled.div`
+const FlyCasualImage = styled.div`
   width: 100vw;
-  height: 500px;
+  height: 600px;
   background-size: contain;
   margin-bottom: 1.5em;
+  background: url('https://res.cloudinary.com/dw110cbuf/image/upload/v1555376380/Portfolio/FlyCasualScreen_qkijis.jpg') no-repeat center;
+
   position: relative;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;  
 `; 
-
-const SmashSignup = styled.div`
-  width: 100vw;
-  height: 500px;
-  background-size: contain;
-  margin-bottom: 1.5em;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;  
-`;  
-
-const SmashMobile = styled.div`
-  width: 100vw;
-  height: 500px;
-  background-size: contain;
-  margin-bottom: 1.5em;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;  
-`;  
 
 const ProjectDetails = styled.p`
   font-family: Raleway;
@@ -182,56 +158,35 @@ function redirectBackToHome() {
 }
 
 function prevProject() {
-  history.push('/projects-eartrainer')
+  history.push('/projects-eartrainer');
 }
 
 function FlyCasual() {
   return ( 
     <ProjectsContainer>
-    <Nav />
+    <ProjectNav />
     
     <Logo />
 
     <ProjectTitleAndAboutWrapper>
       <HeaderStyled>
-        <ProjectTitle>Super Smash Brothers Ultimate. Powered by Battlefy</ProjectTitle>
-        <ProjectAboutBold>The largest Super Smash Bros tournament to date, with over 10,000 entrants. The finalists were invited to PAX East by Nintendo. </ProjectAboutBold>
+        <ProjectTitle>Fly Casual</ProjectTitle>
+        <ProjectAboutBold>Community driven open source Unity 3D project for Star Wars X-Wing TMG</ProjectAboutBold>
       </HeaderStyled>
     </ProjectTitleAndAboutWrapper>
-
-    <SmashPortalScreen />
-
+    <FlyCasualImage />
     <ProjectDetailsWrapper>
-      <ProjectTitle>Battlefy Goals</ProjectTitle>
-      <ProjectDetails>At Battlefy my role ran the spectrum from solving UX problems, and full stack engineering. All of that work is aimed at improving the tournament experience for our users while keeping our KPI's in mind.</ProjectDetails>
+      <ProjectTitle>Fly Casual</ProjectTitle>
+      <ProjectDetails>Fly Casual is a fan-made <LinkToBattlefy href='https://www.fantasyflightgames.com/en/products/x-wing/' >"Star Wars: X-Wing Miniatures Game"</LinkToBattlefy> simulator, built using Unity 3D (C#). Available platforms: Windows, Mac, Linux, Android with 3D (2D mode is supported). When I first began contributing to the project, there were only a dozen or so passionate developers. The project has grown in popularity, size and scale and is now transitioning to X-Wing 2.0.    </ProjectDetails>
+      <ProjectDetails>With Fly Casual my contributions have been all gameplay or mechanics related in the 1.0 version of the game. My contributions to the game included incorporating pilot abilities, bombs, and special weapons in to the game. To name a few I was responsible for Quickdraw, Ion-Bombs & Heavy Laser Cannon integrations amongst others. </ProjectDetails>
+    <ProjectDetails>Relevant links for more information, download or support: </ProjectDetails>
       <Bullets>
-        <ProjectBullet>Help grow and cement the future of esports.</ProjectBullet>
-        <ProjectBullet>Create the best possible platform for organizers and ssers.</ProjectBullet>
-        <ProjectBullet>Develop and productise features for Battlefy.com.</ProjectBullet>
-        <ProjectBullet>Work with developers to create amazing tournaments.</ProjectBullet>
+        <ProjectBullet><LinkToBattlefy href='https://github.com/Sandrem/FlyCasual/releases'>Download</LinkToBattlefy></ProjectBullet>
+        <ProjectBullet><LinkToBattlefy href='https://www.youtube.com/channel/UCr1mWwQIDZ_CbE6a9iol24A/videos'>Youtube channel</LinkToBattlefy></ProjectBullet>
+        <ProjectBullet><LinkToBattlefy href='https://discordapp.com/invite/23GGua3'>Discord channel</LinkToBattlefy></ProjectBullet>
+        <ProjectBullet><LinkToBattlefy  href='https://community.fantasyflightgames.com/topic/267459-fly-casual-x-wing-simulator/'>Topic on FFG forum</LinkToBattlefy></ProjectBullet>
       </Bullets>
     </ProjectDetailsWrapper>
-
-    <SmashSignup />
-
-    <ProjectDetailsWrapper>
-      <ProjectDetails>Portals are one of the most common entry points for users, and our team really wanted to impress with this portal. The ability for our users to find, and understand the rules and sign up process is critical. The Smash Bros Portal was unique due to the volume of regional sign ups we had to handle. Our team did a fantastic job showing the different regions and dates. </ProjectDetails>
-      <LinkToBattlefy href='https://www.battlefy.com/supersmashbros2019'>Battlefy Super Smash Bros 2019 Portal</LinkToBattlefy>
-
-    </ProjectDetailsWrapper>
-
-    <SmashMobile />
-
-    <ProjectDetailsWrapper>
-    <ProjectDetails>I was very fortunate to get to work with such an amazingly skilled team, with some solid leaders. The technologies used on the portal included: Node, React & MongoDB. My specific contributions included </ProjectDetails>
-      <Bullets>
-        <ProjectBullet>Incorporation of custom ruleset to Battlefy.com for all Super Smash Games.</ProjectBullet>
-        <ProjectBullet>Mobile Navigation (Pictured Above).</ProjectBullet>
-        <ProjectBullet>Portal QA, mobile responsiveness and bug fixes.</ProjectBullet>
-      </Bullets>
-    </ProjectDetailsWrapper>
-
-
     <ProjectsWrapper>
 		  <PreviousProj onClick={prevProject}>Previous Project</PreviousProj>
 		  <ReturnHome onClick={redirectBackToHome}>Return Home</ReturnHome>
