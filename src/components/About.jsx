@@ -18,6 +18,7 @@ const HighLight = styled.a`
   color: #e31b6d;
   cursor: pointer;
   text-decoration: none;
+
   &:hover {
     transform: translate(5px, 5px);
     color: #decafe;

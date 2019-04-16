@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
 import styled from "@emotion/styled";
 import history from "../../history";
 
@@ -20,20 +20,30 @@ const StyledNavLink = styled.a`
 `;
 
 function scrollToBottom() {
-  window.scrollTo({ top: 3500, left: 0, behaviour: "smooth" });
+  window.scrollTo({ top: 4000, left: 0, behaviour: "smooth" });
 }
 
 function scrollToWork() {
   history.push("/");
 }
 
-function Nav() {
-  return (
-    <NavbarWrapper>
-      <StyledNavLink onClick={scrollToWork}>Home</StyledNavLink>
-      <StyledNavLink onClick={scrollToBottom}>Contact</StyledNavLink>
-    </NavbarWrapper>
-  );
+class Nav extends Component {
+  render() {
+    return (
+      <Fragment>
+        {window.innerWidth >= 760 ? (
+          <NavbarWrapper>
+            <StyledNavLink onClick={scrollToWork}>Home</StyledNavLink>
+            <StyledNavLink onClick={scrollToBottom}>Contact</StyledNavLink>
+          </NavbarWrapper>
+        ) : (
+          <NavbarWrapper>
+            <StyledNavLink onClick={scrollToBottom}>Contact</StyledNavLink>
+          </NavbarWrapper>
+        )}
+      </Fragment>
+    );
+  }
 }
 
 export default Nav;

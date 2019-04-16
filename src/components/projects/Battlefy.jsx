@@ -191,9 +191,7 @@ function Battlefy() {
   return (
     <ProjectsContainer>
       <ProjectNav />
-
       <Logo />
-
       <ProjectTitleAndAboutWrapper>
         <HeaderStyled>
           <ProjectTitle>
@@ -205,9 +203,7 @@ function Battlefy() {
           </ProjectAboutBold>
         </HeaderStyled>
       </ProjectTitleAndAboutWrapper>
-
       <SmashPortalScreen />
-
       <ProjectDetailsWrapper>
         <ProjectTitle>Battlefy Goals</ProjectTitle>
         <ProjectDetails>
@@ -230,9 +226,7 @@ function Battlefy() {
           </ProjectBullet>
         </Bullets>
       </ProjectDetailsWrapper>
-
       <SmashSignup />
-
       <ProjectDetailsWrapper>
         <ProjectDetails>
           Portals are one of the most common entry points for users, and our
@@ -246,9 +240,7 @@ function Battlefy() {
           Battlefy Super Smash Bros 2019 Portal
         </LinkToBattlefy>
       </ProjectDetailsWrapper>
-
       <SmashMobile />
-
       <ProjectDetailsWrapper>
         <ProjectDetails>
           I was very fortunate to get to work with such an amazingly skilled
@@ -266,7 +258,6 @@ function Battlefy() {
           </ProjectBullet>
         </Bullets>
       </ProjectDetailsWrapper>
-
       <ProjectsWrapper>
         <PreviousProj onClick={redirectBackToHome}>Return Home</PreviousProj>
         <NextProj onClick={toNextProj}>Next Project</NextProj>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "@emotion/styled";
 import history from "../../history";
 import Footer from "../Footer";
@@ -164,7 +164,6 @@ function GameJam() {
     <ProjectsContainer>
       <ProjectNav />
       <Logo />
-
       <ProjectTitleAndAboutWrapper>
         <HeaderStyled>
           <ProjectTitle>BC Game Jam 2018 - Scalier</ProjectTitle>
@@ -175,9 +174,7 @@ function GameJam() {
           </ProjectAboutBold>
         </HeaderStyled>
       </ProjectTitleAndAboutWrapper>
-
-      <ScalierScreen />
-
+      {window.innerWidth >= 760 ? <ScalierScreen /> : <Fragment />}
       <ProjectDetailsWrapper>
         <ProjectTitle>Scalier</ProjectTitle>
         <ProjectDetails>
@@ -190,7 +187,6 @@ function GameJam() {
           Download & try the game for yourself or check out our code.
         </LinkToDevPost>
       </ProjectDetailsWrapper>
-
       <ProjectDetailsWrapper>
         <ProjectDetails>
           72 hour project created by two classmates and myself using Game Maker
@@ -208,7 +204,6 @@ function GameJam() {
           <ProjectBullet>Game narrative and story.</ProjectBullet>
         </Bullets>
       </ProjectDetailsWrapper>
-
       <ProjectsWrapper>
         <PreviousProj onClick={prevProject}>Previous Project</PreviousProj>
         <NextProj onClick={nextProject}>Next Project</NextProj>

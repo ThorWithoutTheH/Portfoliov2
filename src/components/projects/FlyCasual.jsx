@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import styled from "@emotion/styled";
 import history from "../../history";
 import Footer from "../Footer";
@@ -163,9 +163,7 @@ function FlyCasual() {
   return (
     <ProjectsContainer>
       <ProjectNav />
-
       <Logo />
-
       <ProjectTitleAndAboutWrapper>
         <HeaderStyled>
           <ProjectTitle>Fly Casual</ProjectTitle>
@@ -175,7 +173,11 @@ function FlyCasual() {
           </ProjectAboutBold>
         </HeaderStyled>
       </ProjectTitleAndAboutWrapper>
+      {window.innerWidth >= 760 ? (
       <FlyCasualImage />
+      ) : (
+        <Fragment></Fragment>
+      )}
       <ProjectDetailsWrapper>
         <ProjectTitle>Fly Casual</ProjectTitle>
         <ProjectDetails>

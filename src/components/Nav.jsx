@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "@emotion/styled";
 
 const NavbarWrapper = styled.div`
@@ -19,20 +19,51 @@ const StyledNavLink = styled.a`
 `;
 
 function scrollToBottom() {
-  window.scrollTo({ top: 3500, left: 0, behaviour: "smooth" });
+  window.scrollTo({ top: 4000, left: 0, behaviour: "smooth" });
 }
 
 function scrollToWork() {
   window.scrollTo({ top: 750, left: 0, behaviour: "smooth" });
 }
 
-function Nav() {
-  return (
-    <NavbarWrapper>
-      <StyledNavLink onClick={scrollToWork}>Work</StyledNavLink>
-      <StyledNavLink onClick={scrollToBottom}>Contact</StyledNavLink>
-    </NavbarWrapper>
-  );
+class Nav extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.state = {
+      visible: false
+    };
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  handleMouseDown(e) {
+    this.toggleMenu();
+
+    console.log("clicked");
+    e.stopPropagation();
+  }
+  toggleMenu() {
+    this.setState({
+      visible: !this.state.visible
+    });
+  }
+  render() {
+    return (
+      <div>
+        {window.innerWidth >= 760 ? (
+          <NavbarWrapper>
+            <StyledNavLink onClick={scrollToWork}>Work</StyledNavLink>
+            <StyledNavLink onClick={scrollToBottom}>Contact</StyledNavLink>
+          </NavbarWrapper>
+        ) : (
+          <NavbarWrapper>
+            <StyledNavLink onClick={scrollToBottom}>Contact</StyledNavLink>
+          </NavbarWrapper>
+        )}
+      </div>
+    );
+  }
 }
 
 export default Nav;

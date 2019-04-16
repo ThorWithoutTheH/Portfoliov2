@@ -49,12 +49,13 @@ const MyLogo = styled.div`
   cursor: pointer;
   max-width: 100%;
   max-height: 100%;
-  width: 120px;
+  width: 200px;
   height: 100px;
   background: url("https://res.cloudinary.com/dw110cbuf/image/upload/v1555376354/Portfolio/Grayscale-on-Transparent_fqejba.png")
     no-repeat center;
   background-size: contain;
   order: 1;
+  margin: 15px;
 
   transition: transform 300ms ease-in-out;
 
@@ -88,7 +89,7 @@ class Home extends Component {
   }
 
   scrollToBottom() {
-    window.scrollTo({ top: 3500, left: 0, behaviour: "smooth" });
+    window.scrollTo({ top: 4000, left: 0, behaviour: "smooth" });
   }
   toBattlefy() {
     window.location = "https://battlefy.com/";

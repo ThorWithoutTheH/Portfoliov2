@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "@emotion/styled";
 import history from "../history";
 
@@ -19,17 +19,26 @@ const Title = styled.h1`
 const ImageWrap = styled.div`
   text-align: center;
   transition: transform 300ms ease-in-out;
-
+  
   &:hover {
     box-shadow: 0 2px 2px #bababa;
     transform: translate(0px, -5px);
   }
 `;
 
-const Project1Snippet = styled.img`
+const ProjectSnippet = styled.img`
   margin: 15px;
   transition: transform 300ms ease-in-out;
   cursor: pointer;
+`;
+
+const MobileSnippet = styled.img`
+  margin: 15px;
+  transition: transform 300ms ease-in-out;
+  cursor: pointer;
+  height: 300px;
+  width: 300px;
+  align-items: center;
 `;
 
 const TextForProject = styled.div`
@@ -38,30 +47,7 @@ const TextForProject = styled.div`
   height: 30px;
 `;
 
-const Project2Snippet = styled.img`
-  margin: 15px;
-  transition: transform 300ms ease-in-out;
-  cursor: pointer;
-`;
-
-const Project3Snippet = styled.img`
-  margin: 15px;
-  transition: transform 300ms ease-in-out;
-  cursor: pointer;
-`;
-
-const Project4Snippet = styled.img`
-  margin: 15px;
-  transition: transform 300ms ease-in-out;
-  cursor: pointer;
-`;
-
-const ProjectText = styled.div`
-  margin: 10px;
-`;
-
 // relocation functions
-
 function toBattlefy() {
   history.push("/work-battlefy");
 }
@@ -78,44 +64,81 @@ function toFlyCasual() {
   history.push("/projects-flycasual");
 }
 
-function ProjectCarousel() {
-  return (
-    <div>
-      <Title>Projects & Featured Work</Title>
-      <ProjectCarouselWrapper>
-        <ImageWrap>
-          <Project1Snippet
-            src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376358/Portfolio/ProjectBattlefy_eqdsdi.jpg"
-            onClick={toBattlefy}
-          />
-          <TextForProject>
-            Battlefy: SSBU Open Nintendo of America
-          </TextForProject>
-        </ImageWrap>
-        <ImageWrap>
-          <Project2Snippet
-            src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376364/Portfolio/ProjectGameJam18_pnfilj.jpg"
-            onClick={toGameJam}
-          />
-          <TextForProject>BC Game Jam 18: First Place</TextForProject>
-        </ImageWrap>
-        <ImageWrap>
-          <Project3Snippet
-            src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376360/Portfolio/ProjectEarTrainer_kyx3mr.jpg"
-            onClick={toEarTrainer}
-          />
-          <TextForProject>Ear Trainer - iOS App</TextForProject>
-        </ImageWrap>
-        <ImageWrap>
-          <Project4Snippet
-            src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376362/Portfolio/ProjectFlyCasual_o3noic.jpg"
-            onClick={toFlyCasual}
-          />
-          <TextForProject>Fly Casual - Open Source Game</TextForProject>
-        </ImageWrap>
-      </ProjectCarouselWrapper>
-    </div>
-  );
+class ProjectCarousel extends Component {
+  render() {
+    return (
+      <div>
+        <Title>Projects & Featured Work</Title>
+        {window.innerWidth >= 760 ? (
+        <ProjectCarouselWrapper>
+          <ImageWrap>
+            <ProjectSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376358/Portfolio/ProjectBattlefy_eqdsdi.jpg"
+              onClick={toBattlefy}
+            />
+            <TextForProject>
+              Battlefy: SSBU Open Nintendo of America
+            </TextForProject>
+          </ImageWrap>
+          <ImageWrap>
+            <ProjectSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376364/Portfolio/ProjectGameJam18_pnfilj.jpg"
+              onClick={toGameJam}
+            />
+            <TextForProject>BC Game Jam 18: First Place</TextForProject>
+          </ImageWrap>
+          <ImageWrap>
+            <ProjectSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376360/Portfolio/ProjectEarTrainer_kyx3mr.jpg"
+              onClick={toEarTrainer}
+            />
+            <TextForProject>Ear Trainer - iOS App</TextForProject>
+          </ImageWrap>
+          <ImageWrap>
+            <ProjectSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376362/Portfolio/ProjectFlyCasual_o3noic.jpg"
+              onClick={toFlyCasual}
+            />
+            <TextForProject>Fly Casual - Open Source Game</TextForProject>
+          </ImageWrap>
+        </ProjectCarouselWrapper>
+        ) : (
+          <ProjectCarouselWrapper>
+          <ImageWrap>
+            <MobileSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376358/Portfolio/ProjectBattlefy_eqdsdi.jpg"
+              onClick={toBattlefy}
+            />
+            <TextForProject>
+              Battlefy: SSBU Open Nintendo of America
+            </TextForProject>
+          </ImageWrap>
+          <ImageWrap>
+            <MobileSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376364/Portfolio/ProjectGameJam18_pnfilj.jpg"
+              onClick={toGameJam}
+            />
+            <TextForProject>BC Game Jam 18: First Place</TextForProject>
+          </ImageWrap>
+          <ImageWrap>
+            <MobileSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376360/Portfolio/ProjectEarTrainer_kyx3mr.jpg"
+              onClick={toEarTrainer}
+            />
+            <TextForProject>Ear Trainer - iOS App</TextForProject>
+          </ImageWrap>
+          <ImageWrap>
+            <MobileSnippet
+              src="https://res.cloudinary.com/dw110cbuf/image/upload/v1555376362/Portfolio/ProjectFlyCasual_o3noic.jpg"
+              onClick={toFlyCasual}
+            />
+            <TextForProject>Fly Casual - Open Source Game</TextForProject>
+          </ImageWrap>
+        </ProjectCarouselWrapper>
+        )}
+      </div>
+    );
+  }
 }
 
 export default ProjectCarousel;
